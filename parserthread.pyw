@@ -68,10 +68,10 @@ class ParserThread(threading.Thread):
         if not params['frame type'] == item['frameType']:
             return None
 
-        if len(item['sockets']) < params['sockets']:
+        if 'sockets' in item and (len(item['sockets']) < params['sockets']):
             return None
 
-        if not self.check_links(item['sockets'], params['links']):
+        if 'sockets' in item and (not self.check_links(item['sockets'], params['links'])):
             return None
 
         full_name = constants.LOCALIZATION.sub('', ' '.join(filter(None, [item['name'], item['typeLine']])))
