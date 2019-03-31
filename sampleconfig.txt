@@ -2,8 +2,8 @@
 # Rename this as "scambot.cfg" to test it out
 
 [defaults]
-league = Hardcore Legacy
-currency = exa
+league = Synthesis
+currency = chaos
 maxprice = 3
 minprice = 1
 
